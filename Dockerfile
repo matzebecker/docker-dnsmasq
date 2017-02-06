@@ -12,7 +12,8 @@ RUN apk update \
 	&& apk del .build-deps
 #configure dnsmasq
 run mkdir -p /etc/default/
-RUN echo -e "ENABLED=1\nIGNORE_RESOLVCONF=yes" > /etc/default/dnsmasq
+RUN mkdir -p /tftpboot
+#RUN echo -e "ENABLED=1\nIGNORE_RESOLVCONF=yes" > /etc/default/dnsmasq
 COPY dnsmasq.conf /etc/dnsmasq.conf
 #run!
 CMD ["webproc","--config","/etc/dnsmasq.conf","--","dnsmasq","--no-daemon"]
