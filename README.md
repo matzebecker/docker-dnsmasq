@@ -47,9 +47,7 @@ dnsmasq in a docker container for booting Raspberry Pis via network
 
 #### MIT License
 
-Copyright &copy; 2016 Jaime Pillora &lt;dev@jpillora.com&gt;
-
-Extended with TFTP support by matzebecker
+Copyright &copy; 2016 Jaime Pillora &lt;dev@jpillora.com&gt; simplified and Raspberry Pi specific configurationt by Matthias Becker
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
