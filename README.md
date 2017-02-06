@@ -37,10 +37,6 @@ dnsmasq in a docker container, configurable via a [simple web UI](https://github
 		matthiasbecker/dnsmasq-tftp
 	```
 
-1. Visit `http://<docker-host>:5380`, authenticate with `foo/bar` and you should see
-
-	<img width="726" alt="screen shot 2016-10-02 at 10 27 46 pm" src="https://cloud.githubusercontent.com/assets/633843/19020264/c6d8eee8-88ef-11e6-9eee-c09aa07cad62.png">
-
 1. Test it out with
 
 	```
