@@ -31,7 +31,6 @@ dnsmasq in a docker container, configurable via a [simple web UI](https://github
 		--name dnsmasq \
 		-d \
 		-p 53:53/udp \
-		-p 5380:8080 \
 		-v /opt/dnsmasq.conf:/etc/dnsmasq.conf \
 		--log-opt "max-size=100m" \
 		matthiasbecker/dnsmasq-tftp
