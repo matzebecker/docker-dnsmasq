@@ -16,13 +16,12 @@ dnsmasq in a docker container, configurable via a [simple web UI](https://github
 	log-queries
 	#dont use hosts nameservers
 	no-resolv
-	#use google as default nameservers
-	server=8.8.4.4
-	server=8.8.8.8
-	#serve all .company queries using a specific nameserver
-	server=/company/10.0.0.1
-	#explicitly define host-ip mappings
-	address=/myhost.company/10.0.0.2
+	port=0
+	dhcp-range=10.42.0.255,proxy
+	log-dhcp
+	enable-tftp
+	tftp-root=/tftpboot
+	pxe-service=0,"Raspberry Pi Boot"
 	```
 
 1. Run the container
@@ -35,9 +34,7 @@ dnsmasq in a docker container, configurable via a [simple web UI](https://github
 		-p 5380:8080 \
 		-v /opt/dnsmasq.conf:/etc/dnsmasq.conf \
 		--log-opt "max-size=100m" \
-		-e "USER=foo" \
-		-e "PASS=bar" \
-		jpillora/dnsmasq
+		matthiasbecker/dnsmasq-tftp
 	```
 
 1. Visit `http://<docker-host>:5380`, authenticate with `foo/bar` and you should see
