@@ -9,4 +9,4 @@ RUN mkdir -p /tftpboot
 #RUN echo -e "ENABLED=1\nIGNORE_RESOLVCONF=yes" > /etc/default/dnsmasq
 COPY dnsmasq.conf /etc/dnsmasq.conf
 #run!
-CMD ["dnsmasq","-k"]
+CMD ["dnsmasq"]
