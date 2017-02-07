@@ -7,5 +7,4 @@ RUN apk update \
 RUN mkdir -p /etc/default/
 RUN mkdir -p /tftpboot
 #run!
-EXPOSE 53 53/udp
-ENTRYPOINT ["dnsmasq", "-k"]
+CMD ["dnsmasq", "--no-daemon"]
